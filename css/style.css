@@ -924,6 +924,7 @@ a:focus {
   
   .education {
     display: flexbox;
+    position: relative;
     gap: 2rem;
   }
   
