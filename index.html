@@ -1,514 +1,780 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>DevFolio - Developer Portfolio Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>DevFolio - Developer Portfolio Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free Website Template" name="keywords" />
+    <meta content="Free Website Template" name="description" />
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">TQuiLa's</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Custom Carousel Styles -->
+    <style>
+      /* Experience Carousel Styling */
+      #experienceCarousel {
+        margin-top: 30px;
+      }
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#service" class="nav-item nav-link">Service</a>
-                        <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                        <a href="#activities"class="nav-item nav-link">Journey</a>
-                        <a href="#educations"class="nav-item nav-link">Education</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
-            </div>
+      .carousel-item {
+        padding: 20px;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 5%;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        padding: 15px;
+      }
+
+      .carousel-indicators li {
+        background-color: #999;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+
+      .carousel-indicators .active {
+        background-color: #343a40;
+      }
+
+      .experience-wrap {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .portfolio-img img {
+        max-height: 400px;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-light navbar-light">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand">TQuiLa's</a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav ml-auto">
+            <a href="#home" class="nav-item nav-link active">Home</a>
+            <a href="#about" class="nav-item nav-link">About</a>
+            <a href="#service" class="nav-item nav-link">Service</a>
+            <a href="#experience" class="nav-item nav-link">Experience</a>
+            <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+            <a href="#activities" class="nav-item nav-link">Journey</a>
+            <a href="#educations" class="nav-item nav-link">Education</a>
+          </div>
         </div>
-        <!-- Nav Bar End -->
+      </div>
+    </div>
+    <!-- Nav Bar End -->
 
-
-        <!-- Hero Start -->
-        <div class="hero" id="home">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <p>I'm</p>
-                                <h1>Tabitha Aquila Lamsari Marbun</h1>
-                                <h2></h2>
-                                <div class="typed-text">Software Quality Assurance, Front End Developer, UI UX Designer, Web Developer, Android Developer</div>
-                            </div>
-                            <div class="hero-btn">
-                                <a class="btn" target="_blank" href="https://drive.google.com/file/d/1dDoPDdc69cE692XkWVRYnfiYc167B2Kt/view?usp=sharing">Download CV</a>
-                                <a class="btn" target="_blank" href="https://mailto:tabithaquila711@gmail.com">Contact Me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 d-none d-md-block">
-                        <div class="hero-image">
-                            <img src="img/tabitha.jpg" alt="Hero Image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero End -->
-
-
-        <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="pt-6 col-lg-6">
-                        <div class="about-img">
-                            <img src="img/about.jpg" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-content">
-                            <div class="section-header text-left">
-                                <p>Learn About Me</p>
-                                <h2>Undergraduate Informatics Student</h2>
-                            </div>
-                            <div class="about-text">
-                                <p>
-                                    As a third-year Informatics student, I've done several IT related projects. Here's summary of skills that I've gain during my academic pursuits
-                                </p>
-                            </div>
-                            <div class="skills">
-                                <div class="skill-name">
-                                    <p>Web Development</p><p>85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>UI/UX Design</p><p>95%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Software Quality Assurance</p><p>90%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Android Mobile Development</p><p>70%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-        
-        
-        <!-- Service Start -->
-        <div class="service" id="service">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>What I do</p>
-                    <h2>Awesome Quality Services</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-laptop-code"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Web Development</h3>
-                                <p>
-                                    Create a responsive and creative page for your digital product.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-laptop"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>UI/UX Design</h3>
-                                <p>
-                                    Conceptualize, wireframing, and designing website & mobile application interface
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-laptop-code"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Software Quality Assurance</h3>
-                                <p>
-                                    As a detail-oriented person, I pay much attention to the quailty of a product. Has been working with Manual and Automation software and web testing in several projects
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fab fa-android"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Android Mobile Development</h3>
-                                <p>
-                                    Took Android Mobile Development course on my 6th semester and done a project successfully
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
-
-        <!-- Portfolio Start -->
-        <div class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Portfolio</p>
-                    <h2>My Excellent Portfolio</h2>
-                </div>
-                <div class="row portfolio-container">
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-1.png" alt="Image">
-                            </div>
-                            <div class="portfolio-desc mt-3">
-                                <p>
-                                    Work in a team of 6 with scrum development methodologies. 
-                                    Focused on Facilities and Announcement page, I took a role as a front-end programmer and UI Designer.
-                                  </p>
-                            </div>
-                            <div class="portfolio-text mt-4">
-                                <h3>SEMAT IT Del Website</h3>
-                                <a class="btn" href="https://semat.del.ac.id/" target="_blank">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-2.png" alt="Image">
-                            </div>
-                            <div class="portfolio-desc mt-3">
-                                <p>
-                                    Re-designing the homepage of the IT Del website is one of the
-                                    Human Computer Interaction course projects that I worked on for
-                                    approximately 5 days in the 4th semester
-                                  </p>
-                            </div>
-                            <div class="portfolio-text mt-4">
-                                <h3>IT Del's homepage Re-design</h3>
-                                <a class="btn" href="https://www.figma.com/proto/FtlTamnbdjE7u0h03pVZH8/Figma-IT-Del?page-id=0%3A1&type=design&node-id=1-4&viewport=728%2C175%2C0.3&t=oOzb0OYOBHuL4S6o-1&scaling=min-zoom&mode=design" target="_blank">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-3.png" alt="Image">
-                            </div>
-                            <div class="portfolio-desc mt-3">
-                                <p>
-                                    Re-designing IT Del's Online Library Website as a exam project
-                                    of Human Computer Interaction course that I worked on for
-                                    approximately 3 days
-                                  </p>
-                            </div>
-                            <div class="portfolio-text mt-4">
-                                <h3>IT Del's Online Library Re-design</h3>
-                                <a class="btn" href="https://www.figma.com/proto/FtlTamnbdjE7u0h03pVZH8/Figma-IT-Del?page-id=0%3A1&type=design&node-id=1-4&viewport=728%2C175%2C0.3&t=oOzb0OYOBHuL4S6o-1&scaling=min-zoom&mode=design"
-                                target="_blank">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 position-absolute top-50 start-50 translate-middle portfolio-item wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-4.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-desc mt-3">
-                                <p>
-                                    Develop a Android Mobile Application using Kotlin. This was my mobile application development course project on the 6th semester. 
-                                    First time using Kotlin and Android Studio, I learn a lot how to start a mobile application using basics such as recycleview, navigation, fragment, local storage, etc
-                                  </p>
-                            </div>
-                            <div class="portfolio-text mt-4">
-                                <h3>Android Mobile Application</h3>
-                                <a class="btn" href="https://youtu.be/Xwqvd4s3NKI"
-                                target="_blank">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-5.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Social Mobile Apps</h3>
-                                <a class="btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="1s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-6.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Company Website</h3>
-                                <a class="btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio End -->
-
-        <!-- Leadership and activities Start -->
-        <div class="portfolio" id="activities">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Journey</p>
-                    <h2>Leadership and Activities</h2>
-                </div>
-                <div class="row portfolio-container">
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/activities-2.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-desc">
-                                <p><strong>Front End Developer Mini Bootcamp</strong></p>
-                                <p>by Dibimbing.id</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/activities-1.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-desc">
-                                <p><strong>UI/UX Design Mini Bootcamp</strong></p>
-                                <p>by Dibimbing.id</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/activities-3.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-desc">
-                                <p><strong>IT Del General Election Commisions of BEM 2023</strong></p>
-                                <p>Student Organization</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/activities-4.jpeg" alt="Image">
-                            </div>
-                            <div class="portfolio-desc">
-                                <p><strong>Head Division of Student Consultative Assembly Organization</strong></p>
-                                <p>Student Organization</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/activities-5.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-desc">
-                                <p><strong>Head Division of Del Dance Drama Club</strong></p>
-                                <p>Student Organization</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Leadership and activities End -->
-
-        <!-- Education Start -->
-        <div class="educations wow fadeInUp" id="educations">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Learning Path</p>
-                    <h2>Education</h2>
-                </div>
-      
-              <!-- Education 1-->
-              <div class="education">
-                <div class="line">
-                  <div></div>
-                </div>
-                <div class="education-info">
-                  <h2 class="education-title">Del Institute of Technology</h2>
-                  <p>Undergraduate Student - Informatics</p>
-                  <p class="education-years">2021 - Now</p>
+    <!-- Hero Start -->
+    <div class="hero" id="home">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-md-6">
+            <div class="hero-content">
+              <div class="hero-text">
+                <p>I'm</p>
+                <h1>Tabitha Aquila Lamsari Marbun</h1>
+                <h2></h2>
+                <div class="typed-text">
+                  Software Quality Assurance, Front End Developer, UI UX
+                  Designer, Web Developer, Android Developer
                 </div>
               </div>
-      
-              <!-- Education 2-->
-              <div class="education">
-                <div class="line">
-                  <div></div>
-                </div>
-                <div class="education-info">
-                  <h2 class="education-title">SMAS Sutomo 1 Medan</h2>
-                  <p>Natural Science</p>
-                  <p class="education-years">2018 - 2021</p>
-                </div>
+              <div class="hero-btn">
+                <a
+                  class="btn"
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1qE76cZQbVNUKZxLokRJtwSxAR0Se1eT8/view?usp=sharing"
+                  >Download CV</a
+                >
+                <a
+                  class="btn"
+                  target="_blank"
+                  href="https://mailto:tabithaquila711@gmail.com"
+                  >Contact Me</a
+                >
               </div>
-      
-              <div class="education">
-                <div class="line">
-                  <div></div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 d-none d-md-block">
+            <div class="hero-image">
+              <img src="img/tabitha.jpg" alt="Hero Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- About Start -->
+    <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="pt-6 col-lg-6">
+            <div class="about-img">
+              <img src="img/about.jpg" alt="Image" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-content">
+              <div class="section-header text-left">
+                <p>Learn About Me</p>
+                <h2>Undergraduate Informatics Student</h2>
+              </div>
+              <div class="about-text">
+                <p>
+                  As a third-year Informatics student, I've done several IT
+                  related projects. Here's summary of skills that I've gain
+                  during my academic pursuits
+                </p>
+              </div>
+              <div class="skills">
+                <div class="skill-name">
+                  <p>Web Development</p>
+                  <p>85%</p>
                 </div>
-                <div class="education-info">
-                  <h2 class="education-title">SMP Lentera Harapan Medan</h2>
-                  <br />
-                  <p class="education-years">2015 - 2018</p>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <div class="skill-name">
+                  <p>UI/UX Design</p>
+                  <p>95%</p>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <div class="skill-name">
+                  <p>Software Quality Assurance</p>
+                  <p>90%</p>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <div class="skill-name">
+                  <p>Android Mobile Development</p>
+                  <p>70%</p>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="70"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
-        <!-- Education End -->
-        
-        
-        <!-- Contact Start -->
-        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-8">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Start -->
+    <div class="service" id="service">
+      <div class="container">
+        <div
+          class="section-header text-center wow zoomIn"
+          data-wow-delay="0.1s"
+        >
+          <p>What I do</p>
+          <h2>Awesome Quality Services</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="fa fa-laptop-code"></i>
+              </div>
+              <div class="service-text">
+                <h3>Web Development</h3>
+                <p>
+                  Create a responsive and creative page for your digital
+                  product.
+                </p>
+              </div>
             </div>
-        </div>
-        <!-- Contact End -->
-
-
-        <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <h2>Tabitha Aquila</h2>
-                        <h3>Medan, Sumatra Utara</h3>
-                        <div class="footer-menu">
-                            <p>+62 812 9152 0201</p>
-                            <p>http://linkedin.com/in/tabithaquila</p>
-                            <p>https://github.com/ifs21049-itdel</p>
-                        </div>
-                        <div class="footer-social">
-                            <a href="https://github.com/ifs21049-itdel"><i class="fab fa-github"></i></a>
-                            <a href="http://linkedin.com/in/tabithaquila"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container copyright">
-                </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="fa fa-laptop"></i>
+              </div>
+              <div class="service-text">
+                <h3>UI/UX Design</h3>
+                <p>
+                  Conceptualize, wireframing, and designing website & mobile
+                  application interface
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="fa fa-laptop-code"></i>
+              </div>
+              <div class="service-text">
+                <h3>Software Quality Assurance</h3>
+                <p>
+                  As a detail-oriented person, I pay much attention to the
+                  quailty of a product. Has been working with Manual and
+                  Automation software and web testing in several projects
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="fab fa-android"></i>
+              </div>
+              <div class="service-text">
+                <h3>Android Mobile Development</h3>
+                <p>
+                  Took Android Mobile Development course on my 6th semester and
+                  done a project successfully
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Footer End -->
-        
-        
-        <!-- Back to top button -->
-        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
+      </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Experience Start - Carousel Version -->
+    <div class="experience" id="experience">
+      <div class="container">
+        <div
+          class="section-header text-center wow zoomIn"
+          data-wow-delay="0.1s"
+        >
+          <p>My Experience</p>
+          <h2>Experience Preview</h2>
         </div>
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/typed/typed.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+        <div
+          id="experienceCarousel"
+          class="carousel slide wow fadeInUp"
+          data-wow-delay="0.2s"
+          data-ride="carousel"
+        >
+          <!-- Indicators -->
+          <!-- <ol class="carousel-indicators">
+            <li
+              data-target="#experienceCarousel"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#experienceCarousel" data-slide-to="1"></li>
+            <li data-target="#experienceCarousel" data-slide-to="2"></li>
+          </ol> -->
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="experience-wrap text-center">
+                    <div class="experience-img">
+                      <img
+                        src="img/experience-1.jpg"
+                        alt="Front-End Developer Intern"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="experience-desc mt-3">
+                      <h4>Front-End Developer Intern</h4>
+                      <p>
+                        <strong>Permana Solutions</strong> | June - August 2024
+                      </p>
+                      <p>
+                        Worked as a Front-End Developer Intern within a
+                        microservices team at Permana Solutions, an IT service
+                        company. I was responsible for developing a client's
+                        explosive transportation procurement website in
+                        collaboration with other employees. The project was
+                        built using Next.js (App Router + Server Actions) on the
+                        front end and .NET on the back end. The development
+                        process followed agile methodology and was completed
+                        over approximately three months.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <!-- <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="experience-wrap text-center">
+                    <div class="portfolio-img">
+                      <img
+                        src="img/portfolio-2.png"
+                        alt="SEMAT IT Del Website"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="portfolio-desc mt-3">
+                      <h4>Front-End Developer & UI Designer</h4>
+                      <p><strong>SEMAT IT Del Website</strong> | 2022</p>
+                      <p>
+                        Worked in a team of 6 with scrum development
+                        methodologies. Focused on Facilities and Announcement
+                        page, I took a role as a front-end programmer and UI
+                        Designer. Developed responsive interfaces using
+                        Bootstrap and implemented interactive features with
+                        JavaScript.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Slide 3 -->
+            <!-- <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="experience-wrap text-center">
+                    <div class="portfolio-img">
+                      <img
+                        src="img/portfolio-4.jpg"
+                        alt="Android Developer"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="portfolio-desc mt-3">
+                      <h4>Android Developer</h4>
+                      <p>
+                        <strong>Mobile App Development Course</strong> | 2023
+                      </p>
+                      <p>
+                        Developed an Android Mobile Application using Kotlin as
+                        part of my mobile application development course.
+                        Learned to implement key mobile development concepts
+                        including recycleview, navigation, fragments, and local
+                        storage. Designed and built a fully functional app from
+                        concept to deployment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+          <!-- Controls -->
+          <a
+            class="carousel-control-prev"
+            href="#experienceCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#experienceCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Experience End -->
+
+    <!-- Portfolio Start -->
+    <div class="portfolio" id="portfolio">
+      <div class="container">
+        <div
+          class="section-header text-center wow zoomIn"
+          data-wow-delay="0.1s"
+        >
+          <p>My Portfolio</p>
+          <h2>My Excellent Portfolio</h2>
+        </div>
+        <div class="row portfolio-container">
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp"
+            data-wow-delay="0.0s"
+          >
+            <div class="portfolio-wrap">
+              <div class="portfolio-img">
+                <img src="img/portfolio-1.png" alt="Image" />
+              </div>
+              <div class="portfolio-desc mt-3">
+                <p>
+                  Work in a team of 6 with scrum development methodologies.
+                  Focused on Facilities and Announcement page, I took a role as
+                  a front-end programmer and UI Designer.
+                </p>
+              </div>
+              <div class="portfolio-text mt-4">
+                <h3>SEMAT IT Del Website</h3>
+                <a class="btn" href="https://semat.del.ac.id/" target="_blank"
+                  >+</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="portfolio-wrap">
+              <div class="portfolio-img">
+                <img src="img/portfolio-2.png" alt="Image" />
+              </div>
+              <div class="portfolio-desc mt-3">
+                <p>
+                  Re-designing the homepage of the IT Del website is one of the
+                  Human Computer Interaction course projects that I worked on
+                  for approximately 5 days in the 4th semester
+                </p>
+              </div>
+              <div class="portfolio-text mt-4">
+                <h3>IT Del's homepage Re-design</h3>
+                <a
+                  class="btn"
+                  href="https://www.figma.com/proto/FtlTamnbdjE7u0h03pVZH8/Figma-IT-Del?page-id=0%3A1&type=design&node-id=1-4&viewport=728%2C175%2C0.3&t=oOzb0OYOBHuL4S6o-1&scaling=min-zoom&mode=design"
+                  target="_blank"
+                  >+</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="portfolio-wrap">
+              <div class="portfolio-img">
+                <img src="img/portfolio-3.png" alt="Image" />
+              </div>
+              <div class="portfolio-desc mt-3">
+                <p>
+                  Re-designing IT Del's Online Library Website as a exam project
+                  of Human Computer Interaction course that I worked on for
+                  approximately 3 days
+                </p>
+              </div>
+              <div class="portfolio-text mt-4">
+                <h3>IT Del's Online Library Re-design</h3>
+                <a
+                  class="btn"
+                  href="https://www.figma.com/proto/FtlTamnbdjE7u0h03pVZH8/Figma-IT-Del?page-id=0%3A1&type=design&node-id=1-4&viewport=728%2C175%2C0.3&t=oOzb0OYOBHuL4S6o-1&scaling=min-zoom&mode=design"
+                  target="_blank"
+                  >+</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 position-absolute top-50 start-50 translate-middle portfolio-item wow fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="portfolio-wrap">
+              <div class="portfolio-img">
+                <img src="img/portfolio-4.jpg" alt="Image" />
+              </div>
+              <div class="portfolio-desc mt-3">
+                <p>
+                  Develop a Android Mobile Application using Kotlin. This was my
+                  mobile application development course project on the 6th
+                  semester. First time using Kotlin and Android Studio, I learn
+                  a lot how to start a mobile application using basics such as
+                  recycleview, navigation, fragment, local storage, etc
+                </p>
+              </div>
+              <div class="portfolio-text mt-4">
+                <h3>Android Mobile Application</h3>
+                <a
+                  class="btn"
+                  href="https://youtu.be/Xwqvd4s3NKI"
+                  target="_blank"
+                  >+</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio End -->
+
+    <!-- Leadership and activities Start -->
+    <div class="portfolio" id="activities">
+      <div class="container">
+        <div
+          class="section-header text-center wow zoomIn"
+          data-wow-delay="0.1s"
+        >
+          <p>My Journey</p>
+          <h2>Leadership and Activities</h2>
+        </div>
+        <div class="row portfolio-container">
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp"
+            data-wow-delay="0.0s"
+          >
+            <div class="portfolio-wrap">
+              <div class="portfolio-img">
+                <img src="img/activities-2.jpg" alt="Image" />
+              </div>
+              <div class="portfolio-desc">
+                <p><strong>Front End Developer Mini Bootcamp</strong></p>
+                <p>by Dibimbing.id</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp"
+            data-wow-delay="0.0s"
+          >
+            <div class="portfolio-wrap">
+              <div class="portfolio-img">
+                <img src="img/activities-1.jpg" alt="Image" />
+              </div>
+              <div class="portfolio-desc">
+                <p><strong>UI/UX Design Mini Bootcamp</strong></p>
+                <p>by Dibimbing.id</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp"
+            data-wow-delay="0.0s"
+          >
+            <div class="portfolio-wrap">
+              <div class="portfolio-img">
+                <img src="img/activities-3.jpg" alt="Image" />
+              </div>
+              <div class="portfolio-desc">
+                <p>
+                  <strong
+                    >IT Del General Election Commisions of BEM 2023</strong
+                  >
+                </p>
+                <p>Student Organization</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp"
+            data-wow-delay="0.0s"
+          >
+            <div class="portfolio-wrap">
+              <div class="portfolio-img">
+                <img src="img/activities-4.jpeg" alt="Image" />
+              </div>
+              <div class="portfolio-desc">
+                <p>
+                  <strong
+                    >Head Division of Student Consultative Assembly
+                    Organization</strong
+                  >
+                </p>
+                <p>Student Organization</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp"
+            data-wow-delay="0.0s"
+          >
+            <div class="portfolio-wrap">
+              <div class="portfolio-img">
+                <img src="img/activities-5.jpg" alt="Image" />
+              </div>
+              <div class="portfolio-desc">
+                <p><strong>Head Division of Del Dance Drama Club</strong></p>
+                <p>Student Organization</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Leadership and activities End -->
+
+    <!-- Education Start -->
+    <div class="educations wow fadeInUp" id="educations">
+      <div class="container">
+        <div
+          class="section-header text-center wow zoomIn"
+          data-wow-delay="0.1s"
+        >
+          <p>Learning Path</p>
+          <h2>Education</h2>
+        </div>
+
+        <!-- Education 1-->
+        <div class="education">
+          <div class="line">
+            <div></div>
+          </div>
+          <div class="education-info">
+            <h2 class="education-title">Del Institute of Technology</h2>
+            <p>Undergraduate Student - Informatics</p>
+            <p class="education-years">2021 - Now</p>
+          </div>
+        </div>
+
+        <!-- Education 2-->
+        <div class="education">
+          <div class="line">
+            <div></div>
+          </div>
+          <div class="education-info">
+            <h2 class="education-title">SMAS Sutomo 1 Medan</h2>
+            <p>Natural Science</p>
+            <p class="education-years">2018 - 2021</p>
+          </div>
+        </div>
+
+        <div class="education">
+          <div class="line">
+            <div></div>
+          </div>
+          <div class="education-info">
+            <h2 class="education-title">SMP Lentera Harapan Medan</h2>
+            <br />
+            <p class="education-years">2015 - 2018</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Education End -->
+
+    <!-- Footer Start -->
+    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="footer-info">
+            <h2>Tabitha Aquila</h2>
+            <h3>Medan, Sumatra Utara</h3>
+            <div class="footer-menu">
+              <p>+62 812 9152 0201</p>
+              <p>http://linkedin.com/in/tabithaquila</p>
+              <p>https://github.com/ifs21049-itdel</p>
+            </div>
+            <div class="footer-social">
+              <a href="https://github.com/ifs21049-itdel"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="http://linkedin.com/in/tabithaquila"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="container copyright"></div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to top button -->
+    <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Pre Loader -->
+    <div id="loader" class="show">
+      <div class="loader"></div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
